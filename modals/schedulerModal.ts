@@ -1,4 +1,4 @@
-import mongoose, { Document, Model, Schema, model } from 'mongoose';
+import  {Schema, model } from 'mongoose';
 
 interface Scheduler {
     title: string;
@@ -16,7 +16,7 @@ const schedulerSchema = new Schema<Scheduler>({
     frequency: { type: String, required: true },
     repeat: { type: String },
     time: { type: String, required: true },
-});
+}, { timestamps: true });
 
 const EmailSchedulerModel= model('EmailScheduler', schedulerSchema);
 

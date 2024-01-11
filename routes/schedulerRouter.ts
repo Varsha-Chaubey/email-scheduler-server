@@ -2,10 +2,10 @@ import { Router } from 'express';
 import { allSchedules, createScheduler,deleteSchedules,searchSchedules,updateScheduler } from '../controllers/schedulerController';
 const router = Router();
 
-router.post('/createSchedules', createScheduler);
-router.put('/updateSchedules/:id', updateScheduler);
-router.get('/getSchedules', allSchedules);
-router.get('/searchSchedules', searchSchedules);
-router.delete('/deleteSchedules/:id', deleteSchedules);
+router.post('/create', createScheduler);
+router.put('/update/:id', updateScheduler);
+router.get('/get', allSchedules);
+router.get('/search', searchSchedules);
+router.delete('/delete/:id', deleteSchedules);
 
 export default router
